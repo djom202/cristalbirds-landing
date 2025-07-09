@@ -1,0 +1,9 @@
+services:
+  web:
+    build: .
+    container_name: cristalbirds_landing
+    restart: always
+    ports:
+      - "4010:3000"
+    environment:
+      - NODE_ENV=production
