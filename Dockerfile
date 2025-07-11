@@ -1,4 +1,3 @@
-# Etapa de construcción
 FROM node:18-alpine AS builder
 
 WORKDIR /app
@@ -9,7 +8,6 @@ RUN npm install --legacy-peer-deps
 COPY . .
 RUN npm run build
 
-# Etapa de producción
 FROM node:18-alpine
 
 WORKDIR /app
@@ -17,6 +15,6 @@ WORKDIR /app
 COPY --from=builder /app ./
 
 ENV NODE_ENV=production
-EXPOSE 3000
+EXPOSE 5173
 
 CMD ["npm", "start"]

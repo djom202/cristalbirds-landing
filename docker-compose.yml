@@ -4,6 +4,6 @@ services:
     container_name: cristalbirds_landing
     restart: always
     ports:
-      - "4010:3000"
+      - "4010:5173"
     environment:
       - NODE_ENV=production
